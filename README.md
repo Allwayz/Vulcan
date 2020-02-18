@@ -4,7 +4,7 @@
 
 ------
 
-# #开源许可：
+## 开源许可：
 
 [![Vulcan](https://badgen.net/github/license/Allwayz/Vulcan)](https://github.com/Allwayz/Vulcan/blob/master/LICENSE)
 
