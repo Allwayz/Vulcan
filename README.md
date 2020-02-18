@@ -9,7 +9,7 @@
 
 ## 开发文档：
 
-[Vulcan开发文档](https://allwayz-blog-1259174617.cos.ap-shanghai.myqcloud.com/Vulcan/Volcan%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3.html)
+[Vulcan开发文档](https://allwayz-blog-1259174617.cos.ap-shanghai.myqcloud.com/Vulcan/VolcanDevDocumentation.html)
 
 ## 开源许可：
 
