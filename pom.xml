@@ -23,6 +23,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
+<<<<<<< HEAD
         <!--JavaFX支持-->
         <dependency>
             <groupId>de.roskenet</groupId>
@@ -33,6 +34,22 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+=======
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <!-- <scope>provided</scope> （去掉此项即可）-->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--权限校验-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-security</artifactId>-->
+<!--        </dependency>-->
+>>>>>>> d24df4fb3a6d7cd7597a4f208ddaa50d27f44eda
         <!--数据库映射-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -95,6 +112,13 @@
             <artifactId>mybatis-plus-generator</artifactId>
             <version>3.3.1.tmp</version>
         </dependency>
+<<<<<<< HEAD
+=======
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+>>>>>>> d24df4fb3a6d7cd7597a4f208ddaa50d27f44eda
 
     </dependencies>
 
