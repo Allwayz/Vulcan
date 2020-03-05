@@ -128,6 +128,5 @@
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-annotation:3.3.1.tmp" level="project" />
     <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:3.1" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.29" level="project" />
-
   </component>
 </module>

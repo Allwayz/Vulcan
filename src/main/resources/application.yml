@@ -19,4 +19,4 @@ spring:
     username: vulcan
     password: 990312lllLLL???
 server:
-  port: 9989
+  port: 9990
