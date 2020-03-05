@@ -2,6 +2,8 @@ package com.vulcan.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import java.time.LocalDateTime;
+import BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -12,7 +14,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-02
+ * @since 2020-03-05
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -31,6 +33,14 @@ public class Medicine extends BaseEntity {
     private String status;
 
     private Integer medicineCount;
+
+    private LocalDateTime createTime;
+
+    private LocalDateTime updateTime;
+
+    private Integer isDelete;
+
+    private Integer medicineTypeId;
 
 
 }

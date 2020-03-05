@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-02
+ * @since 2020-03-05
  */
 public interface IDepartmentSystemService extends IService<DepartmentSystem> {
 

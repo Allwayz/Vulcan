@@ -56,7 +56,7 @@ public class MyBatisGenerator {
         dsc.setUsername("vulcan");
         dsc.setPassword("990312lllLLL???");
         mpg.setDataSource(dsc);
-        //admin,appointment,department,department_dtl,department_system,medicine,prescription,role,user
+        //admin,appointment,department,department_dtl,department_system,medicine,prescription,role,user,medicine_type,city_dtl,province_dtl,national_dtl
 
         // 包配置
         PackageConfig pc = new PackageConfig();
