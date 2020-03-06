@@ -1,7 +1,9 @@
 package com.vulcan.model.entity;
 
 import java.time.LocalDateTime;
-import BaseEntity;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -12,15 +14,15 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-05
+ * @since 2020-03-06
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode()
 @Accessors(chain = true)
-public class ProvinceDtl extends BaseEntity {
+public class ProvinceDtl {
 
     private static final long serialVersionUID = 1L;
-
+    @TableId(value = "province_dtl_id", type = IdType.AUTO)
     private Integer provinceDtlId;
 
     private String provinceDtlName;

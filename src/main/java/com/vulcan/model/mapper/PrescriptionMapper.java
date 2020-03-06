@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-05
+ * @since 2020-03-06
  */
 public interface PrescriptionMapper extends BaseMapper<Prescription> {
 

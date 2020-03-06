@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-05
+ * @since 2020-03-06
  */
 @RestController
 @RequestMapping("/model/prescription")

@@ -50,7 +50,7 @@ public class MyBatisGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://47.113.124.79:3306/Volcan?serverTimezone=GMT%2B8");
+        dsc.setUrl("jdbc:mysql://47.113.124.79:3306/Vulcan?serverTimezone=GMT%2B8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("vulcan");

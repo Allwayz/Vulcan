@@ -2,13 +2,12 @@ package com.vulcan.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class Hello {
-    private Logger logger = LoggerFactory.getLogger(Hello.class);
+public class TestController {
+    private Logger logger = LoggerFactory.getLogger(TestController.class);
 
     @RequestMapping("/")
     @ResponseBody
