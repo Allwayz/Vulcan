@@ -3,8 +3,15 @@ package com.vulcan.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ *<p>
+ *     用于确定用户输入的邮箱账号是否符合标准
+ *</p>
+ *
+ * @author allwayz
+ * @since 2020-03-06
+ */
 public class MailFormatCheckUtil {
-
     /**
      *
      * @param content

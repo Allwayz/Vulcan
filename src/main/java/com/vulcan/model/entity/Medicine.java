@@ -2,6 +2,7 @@ package com.vulcan.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import java.time.LocalDateTime;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -12,12 +13,12 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-02
+ * @since 2020-03-06
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode()
 @Accessors(chain = true)
-public class Medicine extends BaseEntity {
+public class Medicine {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,6 +32,14 @@ public class Medicine extends BaseEntity {
     private String status;
 
     private Integer medicineCount;
+
+    private LocalDateTime createTime;
+
+    private LocalDateTime updateTime;
+
+    private Integer isDelete;
+
+    private Integer medicineTypeId;
 
 
 }

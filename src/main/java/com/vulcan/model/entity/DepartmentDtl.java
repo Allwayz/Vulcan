@@ -13,12 +13,12 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-02
+ * @since 2020-03-06
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode()
 @Accessors(chain = true)
-public class DepartmentDtl extends BaseEntity {
+public class DepartmentDtl {
 
     private static final long serialVersionUID = 1L;
 
@@ -28,6 +28,12 @@ public class DepartmentDtl extends BaseEntity {
     private String departmentDtlName;
 
     private String status;
+
+    private LocalDateTime createTime;
+
+    private LocalDateTime updateTime;
+
+    private Integer isDelete;
 
     private Integer departmentId;
 

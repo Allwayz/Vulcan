@@ -13,12 +13,12 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-02
+ * @since 2020-03-06
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode()
 @Accessors(chain = true)
-public class Admin extends BaseEntity {
+public class Admin{
 
     private static final long serialVersionUID = 1L;
 
@@ -26,6 +26,12 @@ public class Admin extends BaseEntity {
     private Integer adminId;
 
     private String adminName;
+
+    private LocalDateTime createTime;
+
+    private LocalDateTime updateTime;
+
+    private Integer isDelete;
 
 
 }

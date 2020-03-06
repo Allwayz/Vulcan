@@ -13,12 +13,12 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-02
+ * @since 2020-03-06
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode()
 @Accessors(chain = true)
-public class User extends BaseEntity {
+public class User {
 
     private static final long serialVersionUID = 1L;
 
@@ -35,7 +35,17 @@ public class User extends BaseEntity {
 
     private String lastName;
 
+    private String bloodType;
+
     private Integer roleId;
+
+    private Integer cityDtlId;
+
+    private LocalDateTime createTime;
+
+    private LocalDateTime updateTime;
+
+    private Integer isDelete;
 
     private Integer departmentDtlId;
 

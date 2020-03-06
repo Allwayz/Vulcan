@@ -14,12 +14,12 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-02
+ * @since 2020-03-06
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode()
 @Accessors(chain = true)
-public class Prescription extends BaseEntity {
+public class Prescription {
 
     private static final long serialVersionUID = 1L;
 
@@ -28,8 +28,13 @@ public class Prescription extends BaseEntity {
 
     private Integer medicineId;
 
-    private Integer userIdPatient;
+    private Integer appointmentId;
 
-    private Integer userIdDoctor;
+    private LocalDateTime createTime;
+
+    private LocalDateTime updateTime;
+
+    private Integer isDelete;
+
 
 }

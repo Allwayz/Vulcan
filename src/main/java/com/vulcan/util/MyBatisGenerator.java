@@ -50,13 +50,13 @@ public class MyBatisGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://47.113.124.79:3306/Volcan?serverTimezone=GMT%2B8");
+        dsc.setUrl("jdbc:mysql://47.113.124.79:3306/Vulcan?serverTimezone=GMT%2B8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("vulcan");
         dsc.setPassword("990312lllLLL???");
         mpg.setDataSource(dsc);
-        //admin,appointment,department,department_dtl,department_system,medicine,prescription,role,user
+        //admin,appointment,department,department_dtl,department_system,medicine,prescription,role,user,medicine_type,city_dtl,province_dtl,national_dtl
 
         // 包配置
         PackageConfig pc = new PackageConfig();
