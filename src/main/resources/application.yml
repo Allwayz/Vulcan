@@ -18,5 +18,12 @@ spring:
     url: jdbc:mysql://47.113.124.79:3306/Vulcan?serverTimezone=GMT%2B8
     username: vulcan
     password: 990312lllLLL???
+  output:
+    ansi:
+      enabled: always
 server:
   port: 9990
+
+
+logging:
+  config: classpath:logback-spring.xml

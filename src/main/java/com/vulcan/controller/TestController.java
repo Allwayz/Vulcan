@@ -46,4 +46,13 @@ public class TestController {
         return "Hello World!Delete";
     }
 
+    @RequestMapping("test")
+    @ResponseBody
+    public String testLogPrint(){
+        logger.info("this is Info");
+        logger.warn("this is Warn");
+        logger.error("this is Error");
+        return "check on Console";
+    }
+
 }
