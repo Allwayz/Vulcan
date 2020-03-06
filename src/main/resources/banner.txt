@@ -43,4 +43,4 @@ ${AnsiColor.BRIGHT_YELLOW}
 ////////////////////////////////////////////////////////////////////
 
 
- ::: Spring-Boot ${spring-boot.version}     ::: Vulcan (version:${application.version})
+ ::: Spring-Boot ${spring-boot.version}     ::: Vulcan 0.0.1.PRE-VERSION
