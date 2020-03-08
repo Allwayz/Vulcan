@@ -1,6 +1,6 @@
 package com.vulcan;
 
-import com.vulcan.model.mapper.PrescriptionMapper;
+
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class TestPrescriptionServiceImpl {
     private Logger logger = LoggerFactory.getLogger(TestPrescriptionServiceImpl.class);
 
-    @Autowired
-    private PrescriptionMapper prescriptionMapper;
+//    @Autowired
+//    private PrescriptionMapper prescriptionMapper;
 }

@@ -1,6 +1,6 @@
 package com.vulcan.model.service;
 
-import com.vulcan.model.entity.CityDtl;
+import com.vulcan.model.entity.MedicalReport;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author Allwayz
  * @since 2020-03-08
  */
-public interface ICityDtlService extends IService<CityDtl> {
+public interface IMedicalReportService extends IService<MedicalReport> {
 
 }

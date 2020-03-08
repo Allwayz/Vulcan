@@ -1,6 +1,5 @@
 package com.vulcan;
 
-import com.vulcan.model.mapper.UserMapper;
 import net.bytebuddy.asm.Advice;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -14,6 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class TestUserServiceImpl {
     private Logger logger = LoggerFactory.getLogger(TestUserServiceImpl.class);
 
-    @Autowired
-    private UserMapper userMapper;
+//    @Autowired
+//    private UserMapper userMapper;
 }

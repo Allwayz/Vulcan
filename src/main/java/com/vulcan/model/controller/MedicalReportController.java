@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-03-08
  */
 @RestController
-@RequestMapping("/model/province-dtl")
-public class ProvinceDtlController {
+@RequestMapping("/model/medical-report")
+public class MedicalReportController {
 
 }

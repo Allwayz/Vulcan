@@ -1,6 +1,6 @@
 package com.vulcan;
 
-import com.vulcan.model.mapper.AppointmentMapper;
+
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class TestAppointmentServiceImpl {
     private Logger logger = LoggerFactory.getLogger(TestAppointmentServiceImpl.class);
 
-    @Autowired
-    private AppointmentMapper appointmentMapper;
+//    @Autowired
+//    private AppointmentMapper appointmentMapper;
 }

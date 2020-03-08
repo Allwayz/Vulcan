@@ -18,36 +18,24 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode()
 @Accessors(chain = true)
-public class User {
+public class MedicalReport {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "user_id", type = IdType.AUTO)
-    private Integer userId;
+    @TableId(value = "medical_report_id", type = IdType.AUTO)
+    private Integer medicalReportId;
 
-    private String userIdentityNumber;
+    private String statement;
 
-    private String userPassword;
+    private Integer prescriptionId;
 
-    private String userEmail;
-
-    private String firstName;
-
-    private String lastName;
-
-    private String bloodType;
-
-    private Integer roleId;
-
-    private Integer cityDtlId;
+    private Integer appointmentId;
 
     private LocalDateTime createTime;
 
     private LocalDateTime updateTime;
 
     private Integer isDelete;
-
-    private Integer departmentDtlId;
 
 
 }

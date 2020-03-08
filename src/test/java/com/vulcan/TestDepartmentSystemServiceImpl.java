@@ -1,6 +1,6 @@
 package com.vulcan;
 
-import com.vulcan.model.mapper.DepartmentSystemMapper;
+
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +13,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class TestDepartmentSystemServiceImpl {
     private Logger logger = LoggerFactory.getLogger(TestDepartmentSystemServiceImpl.class);
 
-    @Autowired
-    private DepartmentSystemMapper departmentSystemMapper;
+//    @Autowired
+//    private DepartmentSystemMapper departmentSystemMapper;
 }

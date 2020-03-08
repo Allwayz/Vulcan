@@ -1,6 +1,6 @@
 package com.vulcan.model.mapper;
 
-import com.vulcan.model.entity.DepartmentSystem;
+import com.vulcan.model.entity.MedicalReport;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author Allwayz
  * @since 2020-03-08
  */
-public interface DepartmentSystemMapper extends BaseMapper<DepartmentSystem> {
+public interface MedicalReportMapper extends BaseMapper<MedicalReport> {
 
 }

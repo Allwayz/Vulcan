@@ -1,8 +1,6 @@
 package com.vulcan;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.vulcan.model.entity.NationalDtl;
-import com.vulcan.model.mapper.NationalDtlMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -19,17 +17,17 @@ import java.util.List;
 public class TestNationDtlServiceImpl {
     private Logger logger = LoggerFactory.getLogger(TestNationDtlServiceImpl.class);
 
-    @Autowired
-    private NationalDtlMapper nationalDtlMapper;
-
-    /**
-     * 测试从数据库打印所有国家信息
-     */
-    @Test
-    public void testSelectAllNational(){
-        List<NationalDtl> nationalDtlList = nationalDtlMapper.selectList(new QueryWrapper<NationalDtl>());
-        for(NationalDtl nationalDtl : nationalDtlList){
-            logger.info(nationalDtl.toString());
-        }
-    }
+//    @Autowired
+//    private NationalDtlMapper nationalDtlMapper;
+//
+//    /**
+//     * 测试从数据库打印所有国家信息
+//     */
+//    @Test
+//    public void testSelectAllNational(){
+//        List<NationalDtl> nationalDtlList = nationalDtlMapper.selectList(new QueryWrapper<NationalDtl>());
+//        for(NationalDtl nationalDtl : nationalDtlList){
+//            logger.info(nationalDtl.toString());
+//        }
+//    }
 }
