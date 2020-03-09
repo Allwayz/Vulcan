@@ -3,6 +3,8 @@ package com.vulcan.model.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
+
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -13,9 +15,10 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-06
+ * @since 2020-03-08
  */
 @Data
+@Builder
 @EqualsAndHashCode()
 @Accessors(chain = true)
 public class User {

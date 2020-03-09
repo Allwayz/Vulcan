@@ -1,5 +1,6 @@
 package com.vulcan;
 
+
 import com.vulcan.model.mapper.CityDtlMapper;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

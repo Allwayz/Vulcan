@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-06
+ * @since 2020-03-08
  */
 public interface IPrescriptionService extends IService<Prescription> {
 

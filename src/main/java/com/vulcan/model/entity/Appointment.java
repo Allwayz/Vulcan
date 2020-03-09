@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-06
+ * @since 2020-03-08
  */
 @Data
 @EqualsAndHashCode()
@@ -29,7 +29,7 @@ public class Appointment {
 
     private Integer patientUserId;
 
-    private Integer doctorsUserId;
+    private Integer doctorUserId;
 
     private LocalDateTime createTime;
 
