@@ -74,7 +74,7 @@ public class BaseController {
                         .userPassword(password)
                         .firstName(firstName)
                         .lastName(lastName)
-                        .roleId(role.getRoleId())
+                        //.roleId(role.getRoleId())
                         .build();
                 logger.info(user.toString());
                 logger.info(department_dtl);
@@ -82,9 +82,10 @@ public class BaseController {
                     user.setDepartmentDtlId(0);
                 } else {
                     user.setDepartmentDtlId(
-                        departmentDtlMapper.selectOne(
-                                new QueryWrapper<DepartmentDtl>()
-                                        .eq("department_dtl_name",department_dtl)).getDepartmentId()
+                            1
+//                        departmentDtlMapper.selectOne(
+//                                new QueryWrapper<DepartmentDtl>()
+//                                        .eq("department_dtl_name",department_dtl)).getDepartmentId()
                     );
                 }
                 map.put("Email", user.getUserEmail());
