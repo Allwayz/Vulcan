@@ -107,6 +107,13 @@ public class BaseController {
         return resultObject;
     }
 
+    /**
+     * <p>
+     *     查询用户
+     * </p>
+     * @param id
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "users/{id}", method = {RequestMethod.GET})
     public ResultObject getUsers(@PathVariable(value = "id") String id) {
@@ -115,4 +122,50 @@ public class BaseController {
         resultObject.setStatusCode(100);
         return resultObject;
     }
+
+    /**
+     * <p>
+     *     更新用户
+     * </p>
+     * @param email
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "user/{email}", method = {RequestMethod.PUT})
+    public ResponseBody updateUsers(@PathVariable(value = "email") String password, String email, String firstName, String lastName){
+        ResultObject resultObject = new ResultObject();
+        User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
+        if(user == null){
+            resultObject.setStatusCode(404);
+        }else {
+            User userToUpdate = User.builder().firstName(firstName)
+                    .lastName(lastName)
+                    .userPassword(password).build();
+            userMapper.update(userToUpdate,new QueryWrapper<>());
+            resultObject.setStatusCode(200);
+        }
+        return (ResponseBody) resultObject;
+    }
+
+    /**
+     * <p>
+     *
+     * </p>
+     * @param email
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "users/{email}", method = {RequestMethod.DELETE})
+    public ResultObject deleteUser(@PathVariable(value = "email") String email){
+        ResultObject resultObject = new ResultObject();
+        User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
+        if(user == null){
+            resultObject.setStatusCode(404);
+        }else {
+            userMapper.deleteById(user.getUserId());
+            resultObject.setStatusCode(200);
+        }
+        return resultObject;
+    }
+
 }
