@@ -7,15 +7,15 @@ mybatis-plus:
       logic-delete-field: isDelete
       logic-delete-value: 1
       logic-not-delete-value: 0
-  configuration:
+  #configuration:
     #Show Sql on Terminal log
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 #配置数据库
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.113.124.79:3306/Vulcan?serverTimezone=GMT%2B8
+    url: jdbc:mysql://47.113.124.79:3306/Vulcan?serverTimezone=GMT%2B8&characterEncoding=UTF-8
     username: vulcan
     password: 990312lllLLL???
   output:
@@ -23,7 +23,3 @@ spring:
       enabled: always
 server:
   port: 9990
-
-
-logging:
-  config: classpath:logback-spring.xml

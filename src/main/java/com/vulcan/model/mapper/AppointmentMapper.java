@@ -2,6 +2,7 @@ package com.vulcan.model.mapper;
 
 import com.vulcan.model.entity.Appointment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -9,8 +10,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-08
+ * @since 2020-04-04
  */
+@Mapper
 public interface AppointmentMapper extends BaseMapper<Appointment> {
 
 }

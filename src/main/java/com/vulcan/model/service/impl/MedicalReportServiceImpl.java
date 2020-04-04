@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-08
+ * @since 2020-04-04
  */
 @Service
 public class MedicalReportServiceImpl extends ServiceImpl<MedicalReportMapper, MedicalReport> implements IMedicalReportService {

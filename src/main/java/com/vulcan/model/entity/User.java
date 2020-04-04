@@ -15,13 +15,13 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-08
+ * @since 2020-04-04
  */
 @Data
 @Builder
 @EqualsAndHashCode()
 @Accessors(chain = true)
-public class User {
+public class User{
 
     private static final long serialVersionUID = 1L;
 
