@@ -5,6 +5,7 @@ import com.vulcan.model.mapper.MedicineMapper;
 import com.vulcan.model.service.IMedicineService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -12,9 +13,10 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-08
+ * @since 2020-04-04
  */
 @Service
+@Transactional
 public class MedicineServiceImpl extends ServiceImpl<MedicineMapper, Medicine> implements IMedicineService {
 
 }

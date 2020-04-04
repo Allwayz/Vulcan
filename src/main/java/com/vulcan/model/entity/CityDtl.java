@@ -13,12 +13,12 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author Allwayz
- * @since 2020-03-08
+ * @since 2020-04-04
  */
 @Data
 @EqualsAndHashCode()
 @Accessors(chain = true)
-public class CityDtl {
+public class CityDtl{
 
     private static final long serialVersionUID = 1L;
 
