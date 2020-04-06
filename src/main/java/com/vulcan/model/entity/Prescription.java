@@ -40,5 +40,4 @@ public class Prescription {
 
     private Integer reportId;
 
-
 }

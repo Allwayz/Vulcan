@@ -19,7 +19,6 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Builder
-@EqualsAndHashCode()
 @Accessors(chain = true)
 public class MedicalReport {
 

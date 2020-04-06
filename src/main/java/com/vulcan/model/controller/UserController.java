@@ -51,28 +51,32 @@ public class UserController extends ApiController {
         if(IdNumber.isEmpty()||Password.isEmpty()||email.isEmpty()||firstName.isEmpty()||lastName.isEmpty()||roleDesc.isEmpty()||cityName.isEmpty()){
             return failed("Empty Field");
         }else {
-            if(IdNumberFormatCheckUtil.CheckCheck(IdNumber)&& MailFormatCheckUtil.checkEmailFormat(email)){
-                String encodeIdNumber = bCryptPasswordEncoderUtil.encode(IdNumber);
-                String encodePassword = bCryptPasswordEncoderUtil.encode(Password);
-                int city_dtl_id = cityDtlMapper.selectOne(new QueryWrapper<CityDtl>().eq("city_dtl_name",cityName)).getCityDtlId();
-                int role_id = roleMapper.selectOne(new QueryWrapper<Role>().eq("role_desc",roleDesc)).getRoleId();
-                User user = User.builder()
-                        .userEmail(email)
-                        .userIdentityNumber(encodeIdNumber)
-                        .userPassword(encodePassword)
-                        .firstName(firstName)
-                        .lastName(lastName)
-                        .roleId(role_id)
-                        .cityDtlId(city_dtl_id)
-                        .build();
-                if (!department.isEmpty()&&roleDesc=="doctor") {
-                    int departmentId = departmentDtlMapper.selectOne(new QueryWrapper<DepartmentDtl>().eq("department_dtl_name", department)).getDepartmentDtlId();
-                    user.setDepartmentDtlId(departmentId);
+            User checkEmail = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
+            if(checkEmail == null){
+                if(IdNumberFormatCheckUtil.CheckCheck(IdNumber)&& MailFormatCheckUtil.checkEmailFormat(email)){
+                    String encodeIdNumber = bCryptPasswordEncoderUtil.encode(IdNumber);
+                    String encodePassword = bCryptPasswordEncoderUtil.encode(Password);
+                    int city_dtl_id = cityDtlMapper.selectOne(new QueryWrapper<CityDtl>().eq("city_dtl_name",cityName)).getCityDtlId();
+                    int role_id = roleMapper.selectOne(new QueryWrapper<Role>().eq("role_desc",roleDesc.toLowerCase())).getRoleId();
+                    User user = User.builder()
+                            .userEmail(email)
+                            .userIdentityNumber(encodeIdNumber)
+                            .userPassword(encodePassword)
+                            .firstName(firstName)
+                            .lastName(lastName)
+                            .roleId(role_id)
+                            .cityDtlId(city_dtl_id)
+                            .build();
+                    if (!department.isEmpty()&&roleDesc=="doctor") {
+                        int departmentId = departmentDtlMapper.selectOne(new QueryWrapper<DepartmentDtl>().eq("department_dtl_name", department)).getDepartmentDtlId();
+                        user.setDepartmentDtlId(departmentId);
+                    }
+                    return success(userMapper.insert(user));
+                }else {
+                    return failed("invalid IdNumber or Email");
                 }
-                return success(userMapper.insert(user));
-            }else {
-                return failed("invalid IdNumber or Email");
             }
+            return failed("Email have been resisted");
         }
     }
 
@@ -110,10 +114,25 @@ public class UserController extends ApiController {
         }
     }
 
+    @PostMapping("{email}/{Password}")
+    public R reSetPassword(@PathVariable String email, @PathVariable String Password){
+        User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
+        if(!(user == null)){
+            user.setUserPassword(bCryptPasswordEncoderUtil.encode(Password));
+            return success(userMapper.updateById(user));
+        }
+        return failed("Email was not find in database");
+    }
+
     @DeleteMapping("{email}")
     public R removeUser(@PathVariable String email){
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_email",email));
         return success(userMapper.deleteById(user.getUserId()));
+    }
+
+    @GetMapping("/doctor")
+    public R getDoctorCount(){
+        return success(userMapper.selectCount(new QueryWrapper<User>().eq("role_id",2)));
     }
 
 }
