@@ -30,6 +30,14 @@ public class AdminController extends ApiController {
     @Autowired
     private BCryptPasswordEncoderUtil bCryptPasswordEncoderUtil;
 
+    /**
+     * <p>
+     *     管理员登陆
+     * </p>
+     * @param userName
+     * @param Password
+     * @return
+     */
     @GetMapping("{userName}/{Password}")
     public R getAdmin(@PathVariable String userName, @PathVariable String Password){
         log.info(userName+Password);
@@ -45,6 +53,14 @@ public class AdminController extends ApiController {
         }
     }
 
+    /**
+     *  <p>
+     *      增加一个管理员
+     *  </p>
+     * @param userName
+     * @param Password
+     * @return
+     */
     @PostMapping("{userName}/{Password}")
     public R addAdmin(@PathVariable String userName, @PathVariable String Password){
         if(userName.isEmpty()||Password.isEmpty()){
@@ -55,6 +71,14 @@ public class AdminController extends ApiController {
         }
     }
 
+    /**
+     * <p>
+     *     修改管理员信息
+     * </p>
+     * @param Password
+     * @param userName
+     * @return
+     */
     @PutMapping("{userName}/{Password}")
     public R updateAdmin(@PathVariable String Password, @PathVariable String userName){
         if(Password.isEmpty()){
