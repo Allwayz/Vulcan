@@ -1,6 +1,5 @@
 package com.vulcan;
 
-
         import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
         import com.vulcan.model.entity.CityDtl;
         import com.vulcan.model.mapper.CityDtlMapper;

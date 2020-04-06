@@ -29,6 +29,7 @@ public class MedicalReportController extends ApiController {
     @Autowired
     private MedicalReportMapper medicalReportMapper;
 
+
     /**
      * <p>
      *     对就诊新建一个回执单
@@ -47,7 +48,6 @@ public class MedicalReportController extends ApiController {
                 .build();
         medicalReportMapper.insert(medicalReport);
         int prescriptionId = medicalReportMapper.selectCount(new QueryWrapper<>());
-
         return null;
     }
 }
